@@ -1,0 +1,11 @@
+snapshot,cycle,kind,end_row,prev_kind,method,kendall_tau_vs_prev,jaccard_top7_vs_prev,kendall_tau_vs_first,jaccard_top7_vs_first
+4,1,checkpoint,399999,drift,SHAP,0.7118,0.75,0.7118,0.75
+4,1,checkpoint,399999,drift,LIME,0.5376,0.2727,0.5376,0.2727
+5,1,checkpoint,499999,checkpoint,SHAP,0.3946,0.5556,0.5851,0.5556
+5,1,checkpoint,499999,checkpoint,LIME,0.6822,0.1667,0.6154,0.2727
+6,1,checkpoint,599999,checkpoint,SHAP,0.5851,0.5556,1.0,1.0
+6,1,checkpoint,599999,checkpoint,LIME,0.7026,0.4,0.5173,0.1667
+7,1,checkpoint,699999,checkpoint,SHAP,-0.204,0.0,-0.204,0.0
+7,1,checkpoint,699999,checkpoint,LIME,0.4009,0.0769,0.3364,0.2727
+8,1,final,710420,checkpoint,SHAP,0.744,0.5556,-0.1987,0.1667
+8,1,final,710420,checkpoint,LIME,0.6931,0.5556,0.3752,0.1667

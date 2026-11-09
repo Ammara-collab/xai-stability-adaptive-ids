@@ -1,0 +1,563 @@
+================================================================
+COMBINED PIPELINE — CICIoT2023 (Benign -> 8x DDoS Flood -> 5x Recon)
+================================================================
+Collecting fixed explanation sample ...
+  explain sample: BenignTraffic.pcap.csv: 5 rows
+  explain sample: DDoS-TCP_Flood.pcap.csv: 5 rows
+  explain sample: DDoS-UDP_Flood.pcap.csv: 5 rows
+  explain sample: DDoS-SYN_Flood.pcap.csv: 5 rows
+  explain sample: DDoS-ICMP_Flood.pcap.csv: 5 rows
+  explain sample: DDoS-HTTP_Flood.pcap.csv: 2 rows
+  explain sample: DDoS-PSHACK_Flood.pcap.csv: 5 rows
+  explain sample: DDoS-RSTFINFlood.pcap.csv: 5 rows
+  explain sample: DDoS-SynonymousIP_Flood.pcap.csv: 5 rows
+  explain sample: Recon-PortScan.pcap.csv: 5 rows
+  explain sample: Recon-PingSweep.pcap.csv: 1 rows
+  explain sample: Recon-OSScan.pcap.csv: 5 rows
+  explain sample: Recon-HostDiscovery.pcap.csv: 5 rows
+  explain sample: VulnerabilityScan.pcap.csv: 5 rows
+  explain sample total: 63 instances, 39 features
+
+
+Streaming BenignTraffic.pcap.csv (label=0) ...
+  ... 10,000 rows streamed, accuracy 0.9999, drifts 0, cycles explained 0
+  ... 20,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 30,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 40,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 50,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 60,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 70,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 80,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 90,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+
+  --- checkpoint at row 99,999 ---
+  ... 100,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 110,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 120,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 130,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 140,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 150,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 160,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 170,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 180,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 190,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+
+  --- checkpoint at row 199,999 ---
+  ... 200,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 210,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 220,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 230,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 240,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 250,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 260,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 270,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 280,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 290,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+
+  --- checkpoint at row 299,999 ---
+  ... 300,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 310,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 320,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 330,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 340,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 350,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 360,000 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+  ... 362,361 rows streamed, accuracy 1.0000, drifts 0, cycles explained 0
+
+Streaming DDoS-TCP_Flood.pcap.csv (label=1) ...
+
+  *** DRIFT at row 362,431 (cycle 0 ends, accuracy so far 1.0000) ***
+  [snapshot 3 | drift | cycle 0] explained at row 362,431 (buffer 5,071 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'ack_flag_number', 'ack_count', 'Protocol Type', 'UDP', 'TCP', 'Header_Length']
+  ... 372,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 1
+  ... 382,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 1
+  ... 392,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 1
+
+  --- checkpoint at row 399,999 ---
+  [snapshot 4 | checkpoint | cycle 1] explained at row 399,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'IAT', 'Header_Length', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'Time_To_Live']
+      LIME top-7: ['Number', 'IAT', 'UDP', 'TCP', 'HTTP', 'Header_Length', 'Tot sum']
+  ... 402,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 412,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 422,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 432,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 442,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 452,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 462,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 472,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 482,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+  ... 492,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 2
+
+  --- checkpoint at row 499,999 ---
+  [snapshot 5 | checkpoint | cycle 1] explained at row 499,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Tot size', 'Rate', 'Header_Length', 'fin_flag_number', 'syn_flag_number', 'Protocol Type']
+      LIME top-7: ['Number', 'Tot size', 'IAT', 'TCP', 'Rate', 'HTTPS', 'UDP']
+  ... 502,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 512,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 522,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 532,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 542,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 552,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 562,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 572,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 582,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+  ... 592,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 3
+
+  --- checkpoint at row 599,999 ---
+  [snapshot 6 | checkpoint | cycle 1] explained at row 599,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'IAT', 'TCP', 'UDP', 'Tot size', 'Tot sum', 'HTTPS']
+  ... 602,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 612,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 622,361 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 628,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+
+Streaming DDoS-UDP_Flood.pcap.csv (label=1) ...
+  ... 638,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 648,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 658,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 668,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 678,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 688,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+  ... 698,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 4
+
+  --- checkpoint at row 699,999 ---
+  [snapshot 7 | checkpoint | cycle 1] explained at row 699,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'IAT', 'ack_count', 'ack_flag_number', 'Tot size', 'syn_count', 'UDP']
+  ... 708,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 718,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 728,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 738,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 748,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 758,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 768,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 778,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 788,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+  ... 798,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 5
+
+  --- checkpoint at row 799,999 ---
+  [snapshot 8 | checkpoint | cycle 1] explained at row 799,999 (buffer 10,000 rows)
+      SHAP top-7: ['UDP', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['UDP', 'IAT', 'Protocol Type', 'Std', 'TCP', 'Max', 'ack_flag_number']
+  ... 808,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 818,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 828,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 838,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 848,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 858,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 868,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 878,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 888,137 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+  ... 894,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 6
+
+Streaming DDoS-SYN_Flood.pcap.csv (label=1) ...
+
+  --- checkpoint at row 899,999 ---
+  [snapshot 9 | checkpoint | cycle 1] explained at row 899,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'TCP', 'syn_flag_number', 'Header_Length', 'ack_flag_number', 'HTTPS', 'syn_count']
+  ... 904,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 914,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 924,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 934,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 944,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 954,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 964,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 974,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 984,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+  ... 994,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 7
+
+  --- checkpoint at row 999,999 ---
+  [snapshot 10 | checkpoint | cycle 1] explained at row 999,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'syn_count', 'IAT', 'ack_flag_number', 'Max', 'Tot size', 'syn_flag_number']
+  ... 1,004,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,014,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,024,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,034,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,044,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,054,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,064,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,074,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,084,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+  ... 1,094,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 8
+
+  --- checkpoint at row 1,099,999 ---
+  [snapshot 11 | checkpoint | cycle 1] explained at row 1,099,999 (buffer 10,000 rows)
+      SHAP top-7: ['syn_count', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['syn_count', 'TCP', 'ack_count', 'UDP', 'Tot size', 'IAT', 'Header_Length']
+  ... 1,104,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,114,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,124,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,134,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,144,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,154,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,160,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+
+Streaming DDoS-ICMP_Flood.pcap.csv (label=1) ...
+  ... 1,170,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,180,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+  ... 1,190,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 9
+
+  --- checkpoint at row 1,199,999 ---
+  [snapshot 12 | checkpoint | cycle 1] explained at row 1,199,999 (buffer 10,000 rows)
+      SHAP top-7: ['ICMP', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['ICMP', 'HTTP', 'Number', 'ack_count', 'Protocol Type', 'Tot size', 'Std']
+  ... 1,200,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,210,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,220,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,230,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,240,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,250,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,260,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,270,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,280,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+  ... 1,290,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 10
+
+  --- checkpoint at row 1,299,999 ---
+  [snapshot 13 | checkpoint | cycle 1] explained at row 1,299,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'UDP', 'TCP', 'HTTPS', 'ack_count', 'ack_flag_number', 'ICMP']
+  ... 1,300,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,310,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,320,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,330,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,340,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,350,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,360,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,370,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,380,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+  ... 1,390,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 11
+
+  --- checkpoint at row 1,399,999 ---
+  [snapshot 14 | checkpoint | cycle 1] explained at row 1,399,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'IAT', 'HTTPS', 'ack_count', 'ack_flag_number', 'TCP', 'ICMP']
+  ... 1,400,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,410,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,420,766 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,428,776 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+
+Streaming DDoS-HTTP_Flood.pcap.csv (label=1) ...
+  ... 1,438,776 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,448,776 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,457,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+
+Streaming DDoS-PSHACK_Flood.pcap.csv (label=1) ...
+  ... 1,467,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,477,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,487,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+  ... 1,497,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 12
+
+  --- checkpoint at row 1,499,999 ---
+  [snapshot 15 | checkpoint | cycle 1] explained at row 1,499,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Tot sum', 'Time_To_Live', 'Header_Length', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'Tot sum', 'TCP', 'IAT', 'AVG', 'ack_count', 'psh_flag_number']
+  ... 1,507,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,517,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,527,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,537,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,547,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,557,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,567,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,577,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,587,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+  ... 1,597,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 13
+
+  --- checkpoint at row 1,599,999 ---
+  [snapshot 16 | checkpoint | cycle 1] explained at row 1,599,999 (buffer 10,000 rows)
+      SHAP top-7: ['ack_count', 'IAT', 'Time_To_Live', 'Header_Length', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['ack_count', 'IAT', 'ack_flag_number', 'Number', 'TCP', 'UDP', 'Std']
+  ... 1,607,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,617,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,627,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,637,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,647,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,657,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,667,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,677,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,687,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+  ... 1,697,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 14
+
+  --- checkpoint at row 1,699,999 ---
+  [snapshot 17 | checkpoint | cycle 1] explained at row 1,699,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'IAT', 'TCP', 'psh_flag_number', 'UDP', 'Tot size', 'ack_count']
+  ... 1,707,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,717,566 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,725,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+
+Streaming DDoS-RSTFINFlood.pcap.csv (label=1) ...
+  ... 1,735,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,745,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,755,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,765,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,775,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,785,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+  ... 1,795,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 15
+
+  --- checkpoint at row 1,799,999 ---
+  [snapshot 18 | checkpoint | cycle 1] explained at row 1,799,999 (buffer 10,000 rows)
+      SHAP top-7: ['fin_count', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['fin_count', 'Number', 'ack_count', 'TCP', 'UDP', 'Tot sum', 'Time_To_Live']
+  ... 1,805,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,815,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,825,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,835,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,845,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,855,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,865,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,875,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,885,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+  ... 1,895,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 16
+
+  --- checkpoint at row 1,899,999 ---
+  [snapshot 19 | checkpoint | cycle 1] explained at row 1,899,999 (buffer 10,000 rows)
+      SHAP top-7: ['fin_count', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['fin_count', 'IAT', 'TCP', 'fin_flag_number', 'UDP', 'rst_count', 'ack_flag_number']
+  ... 1,905,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,915,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,925,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,935,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,945,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,955,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,965,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,975,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,985,377 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+  ... 1,992,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 17
+
+Streaming DDoS-SynonymousIP_Flood.pcap.csv (label=1) ...
+
+  --- checkpoint at row 1,999,999 ---
+  [snapshot 20 | checkpoint | cycle 1] explained at row 1,999,999 (buffer 10,000 rows)
+      SHAP top-7: ['syn_flag_number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'Rate', 'fin_flag_number', 'rst_flag_number']
+      LIME top-7: ['syn_flag_number', 'Number', 'psh_flag_number', 'HTTPS', 'ack_count', 'HTTP', 'IAT']
+  ... 2,002,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,012,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,022,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,032,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,042,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,052,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,062,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,072,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,082,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+  ... 2,092,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 18
+
+  --- checkpoint at row 2,099,999 ---
+  [snapshot 21 | checkpoint | cycle 1] explained at row 2,099,999 (buffer 10,000 rows)
+      SHAP top-7: ['Number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'fin_flag_number', 'syn_flag_number', 'rst_flag_number']
+      LIME top-7: ['Number', 'TCP', 'IAT', 'HTTPS', 'UDP', 'syn_count', 'Time_To_Live']
+  ... 2,102,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,112,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,122,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,132,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,142,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,152,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,162,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,172,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,182,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+  ... 2,192,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 19
+
+  --- checkpoint at row 2,199,999 ---
+  [snapshot 22 | checkpoint | cycle 1] explained at row 2,199,999 (buffer 10,000 rows)
+      SHAP top-7: ['syn_flag_number', 'Header_Length', 'Time_To_Live', 'Protocol Type', 'Rate', 'fin_flag_number', 'rst_flag_number']
+      LIME top-7: ['syn_flag_number', 'syn_count', 'psh_flag_number', 'ack_count', 'Number', 'Std', 'Tot size']
+  ... 2,202,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,212,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,222,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,232,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,242,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,252,311 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,260,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+
+Streaming Recon-PortScan.pcap.csv (label=1) ...
+  ... 2,270,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,280,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+  ... 2,290,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 20
+
+  --- checkpoint at row 2,299,999 ---
+  [snapshot 23 | checkpoint | cycle 1] explained at row 2,299,999 (buffer 10,000 rows)
+      SHAP top-7: ['Max', 'HTTPS', 'HTTP', 'IAT', 'Rate', 'Header_Length', 'Tot size']
+      LIME top-7: ['HTTP', 'Max', 'HTTPS', 'AVG', 'psh_flag_number', 'Rate', 'Tot size']
+  ... 2,300,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,310,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,320,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,330,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,340,937 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,343,221 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+
+Streaming Recon-PingSweep.pcap.csv (label=1) ...
+  ... 2,345,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+
+Streaming Recon-OSScan.pcap.csv (label=1) ...
+  ... 2,355,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,365,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,375,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,385,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+  ... 2,395,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 21
+
+  --- checkpoint at row 2,399,999 ---
+  [snapshot 24 | checkpoint | cycle 1] explained at row 2,399,999 (buffer 10,000 rows)
+      SHAP top-7: ['Max', 'HTTPS', 'HTTP', 'IAT', 'Std', 'Rate', 'psh_flag_number']
+      LIME top-7: ['HTTP', 'HTTPS', 'Max', 'Tot size', 'psh_flag_number', 'Std', 'TCP']
+  ... 2,405,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,415,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,425,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,435,483 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,443,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+
+Streaming Recon-HostDiscovery.pcap.csv (label=1) ...
+  ... 2,453,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,463,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,473,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,483,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+  ... 2,493,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 22
+
+  --- checkpoint at row 2,499,999 ---
+  [snapshot 25 | checkpoint | cycle 1] explained at row 2,499,999 (buffer 10,000 rows)
+      SHAP top-7: ['syn_flag_number', 'rst_count', 'Header_Length', 'IAT', 'HTTPS', 'Variance', 'Min']
+      LIME top-7: ['Min', 'HTTP', 'syn_count', 'HTTPS', 'rst_count', 'IAT', 'Max']
+  ... 2,503,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,513,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,523,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,533,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,543,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,553,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,563,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,573,742 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,578,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+
+Streaming VulnerabilityScan.pcap.csv (label=1) ...
+  ... 2,588,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+  ... 2,598,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 23
+
+  --- checkpoint at row 2,599,999 ---
+  [snapshot 26 | checkpoint | cycle 1] explained at row 2,599,999 (buffer 10,000 rows)
+      SHAP top-7: ['IAT', 'Tot size', 'HTTP', 'HTTPS', 'syn_flag_number', 'Max', 'Header_Length']
+      LIME top-7: ['Min', 'HTTP', 'HTTPS', 'Tot size', 'IAT', 'Max', 'ack_count']
+  ... 2,608,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,618,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,628,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,638,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,648,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,658,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,668,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,678,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,688,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+  ... 2,698,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 24
+
+  --- checkpoint at row 2,699,999 ---
+  [snapshot 27 | checkpoint | cycle 1] explained at row 2,699,999 (buffer 10,000 rows)
+      SHAP top-7: ['IAT', 'Max', 'HTTPS', 'fin_flag_number', 'fin_count', 'Time_To_Live', 'Tot sum']
+      LIME top-7: ['IAT', 'Max', 'Tot sum', 'Header_Length', 'fin_flag_number', 'ack_count', 'HTTP']
+  ... 2,708,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,718,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,728,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,738,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,748,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,758,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,768,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,778,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,788,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+  ... 2,798,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 25
+
+  --- checkpoint at row 2,799,999 ---
+  [snapshot 28 | checkpoint | cycle 1] explained at row 2,799,999 (buffer 10,000 rows)
+      SHAP top-7: ['IAT', 'HTTPS', 'Max', 'Rate', 'Time_To_Live', 'ack_count', 'Header_Length']
+      LIME top-7: ['IAT', 'Max', 'HTTPS', 'Tot size', 'Header_Length', 'fin_flag_number', 'AVG']
+  ... 2,808,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,818,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,828,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,838,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,848,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,858,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,868,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,878,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,888,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+  ... 2,898,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 26
+
+  --- checkpoint at row 2,899,999 ---
+  [snapshot 29 | checkpoint | cycle 1] explained at row 2,899,999 (buffer 10,000 rows)
+      SHAP top-7: ['IAT', 'Max', 'Rate', 'UDP', 'HTTPS', 'Min', 'Time_To_Live']
+      LIME top-7: ['IAT', 'Rate', 'UDP', 'Variance', 'Std', 'HTTPS', 'Tot size']
+  ... 2,908,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+  ... 2,918,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+  ... 2,928,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+  ... 2,938,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+  ... 2,948,120 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+  ... 2,951,471 rows streamed, accuracy 1.0000, drifts 1, cycles explained 27
+
+End of stream — explaining final model ...
+  [snapshot 30 | final | cycle 1] explained at row 2,951,470 (buffer 10,000 rows)
+      SHAP top-7: ['IAT', 'Tot sum', 'HTTPS', 'psh_flag_number', 'Tot size', 'Max', 'UDP']
+      LIME top-7: ['HTTPS', 'IAT', 'Max', 'Time_To_Live', 'Tot size', 'HTTP', 'Tot sum']
+
+================================================================
+FULL PIPELINE RESULT
+================================================================
+Rows processed      : 2,951,471
+Overall accuracy    : 1.0000
+Windows             : 296 (10,000 rows each)
+Drifts detected     : 1 at rows [362431]
+Snapshots explained : 28 (skipped: 3)
+  skipped snapshot 0 (checkpoint at row 99,999): buffer holds a single class only
+  skipped snapshot 1 (checkpoint at row 199,999): buffer holds a single class only
+  skipped snapshot 2 (checkpoint at row 299,999): buffer holds a single class only
+  snapshot 4 [drift->checkpoint] SHAP: tau vs prev +0.712, Jaccard vs prev 0.750, tau vs first +0.712, Jaccard vs first 0.750
+  snapshot 4 [drift->checkpoint] LIME: tau vs prev +0.544, Jaccard vs prev 0.400, tau vs first +0.544, Jaccard vs first 0.400
+  snapshot 5 [checkpoint->checkpoint] SHAP: tau vs prev +0.395, Jaccard vs prev 0.556, tau vs first +0.585, Jaccard vs first 0.556
+  snapshot 5 [checkpoint->checkpoint] LIME: tau vs prev +0.781, Jaccard vs prev 0.400, tau vs first +0.625, Jaccard vs first 0.273
+  snapshot 6 [checkpoint->checkpoint] SHAP: tau vs prev +0.585, Jaccard vs prev 0.556, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 6 [checkpoint->checkpoint] LIME: tau vs prev +0.800, Jaccard vs prev 0.750, tau vs first +0.567, Jaccard vs first 0.273
+  snapshot 7 [checkpoint->checkpoint] SHAP: tau vs prev +1.000, Jaccard vs prev 1.000, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 7 [checkpoint->checkpoint] LIME: tau vs prev +0.765, Jaccard vs prev 0.400, tau vs first +0.636, Jaccard vs first 0.400
+  snapshot 8 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 8 [checkpoint->checkpoint] LIME: tau vs prev +0.717, Jaccard vs prev 0.273, tau vs first +0.662, Jaccard vs first 0.400
+  snapshot 9 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 9 [checkpoint->checkpoint] LIME: tau vs prev +0.606, Jaccard vs prev 0.167, tau vs first +0.630, Jaccard vs first 0.400
+  snapshot 10 [checkpoint->checkpoint] SHAP: tau vs prev +1.000, Jaccard vs prev 1.000, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 10 [checkpoint->checkpoint] LIME: tau vs prev +0.843, Jaccard vs prev 0.400, tau vs first +0.584, Jaccard vs first 0.167
+  snapshot 11 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 11 [checkpoint->checkpoint] LIME: tau vs prev +0.717, Jaccard vs prev 0.273, tau vs first +0.602, Jaccard vs first 0.400
+  snapshot 12 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 12 [checkpoint->checkpoint] LIME: tau vs prev +0.565, Jaccard vs prev 0.167, tau vs first +0.674, Jaccard vs first 0.273
+  snapshot 13 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 13 [checkpoint->checkpoint] LIME: tau vs prev +0.647, Jaccard vs prev 0.273, tau vs first +0.593, Jaccard vs first 0.556
+  snapshot 14 [checkpoint->checkpoint] SHAP: tau vs prev +1.000, Jaccard vs prev 1.000, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 14 [checkpoint->checkpoint] LIME: tau vs prev +0.774, Jaccard vs prev 0.750, tau vs first +0.584, Jaccard vs first 0.400
+  snapshot 15 [checkpoint->checkpoint] SHAP: tau vs prev +0.712, Jaccard vs prev 0.750, tau vs first +0.712, Jaccard vs first 0.750
+  snapshot 15 [checkpoint->checkpoint] LIME: tau vs prev +0.664, Jaccard vs prev 0.400, tau vs first +0.610, Jaccard vs first 0.273
+  snapshot 16 [checkpoint->checkpoint] SHAP: tau vs prev -0.053, Jaccard vs prev 0.556, tau vs first -0.037, Jaccard vs first 0.556
+  snapshot 16 [checkpoint->checkpoint] LIME: tau vs prev +0.750, Jaccard vs prev 0.400, tau vs first +0.668, Jaccard vs first 0.556
+  snapshot 17 [checkpoint->checkpoint] SHAP: tau vs prev -0.037, Jaccard vs prev 0.556, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 17 [checkpoint->checkpoint] LIME: tau vs prev +0.771, Jaccard vs prev 0.556, tau vs first +0.633, Jaccard vs first 0.400
+  snapshot 18 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 18 [checkpoint->checkpoint] LIME: tau vs prev +0.606, Jaccard vs prev 0.400, tau vs first +0.572, Jaccard vs first 0.400
+  snapshot 19 [checkpoint->checkpoint] SHAP: tau vs prev +1.000, Jaccard vs prev 1.000, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 19 [checkpoint->checkpoint] LIME: tau vs prev +0.686, Jaccard vs prev 0.273, tau vs first +0.491, Jaccard vs first 0.273
+  snapshot 20 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 20 [checkpoint->checkpoint] LIME: tau vs prev +0.486, Jaccard vs prev 0.077, tau vs first +0.565, Jaccard vs first 0.167
+  snapshot 21 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first +1.000, Jaccard vs first 1.000
+  snapshot 21 [checkpoint->checkpoint] LIME: tau vs prev +0.737, Jaccard vs prev 0.273, tau vs first +0.593, Jaccard vs first 0.273
+  snapshot 22 [checkpoint->checkpoint] SHAP: tau vs prev -0.026, Jaccard vs prev 0.750, tau vs first -0.026, Jaccard vs first 0.750
+  snapshot 22 [checkpoint->checkpoint] LIME: tau vs prev +0.743, Jaccard vs prev 0.167, tau vs first +0.547, Jaccard vs first 0.167
+  snapshot 23 [checkpoint->checkpoint] SHAP: tau vs prev +0.049, Jaccard vs prev 0.167, tau vs first -0.183, Jaccard vs first 0.077
+  snapshot 23 [checkpoint->checkpoint] LIME: tau vs prev +0.533, Jaccard vs prev 0.167, tau vs first +0.422, Jaccard vs first 0.000
+  snapshot 24 [checkpoint->checkpoint] SHAP: tau vs prev +0.794, Jaccard vs prev 0.556, tau vs first -0.188, Jaccard vs first 0.000
+  snapshot 24 [checkpoint->checkpoint] LIME: tau vs prev +0.738, Jaccard vs prev 0.556, tau vs first +0.439, Jaccard vs first 0.077
+  snapshot 25 [checkpoint->checkpoint] SHAP: tau vs prev +0.525, Jaccard vs prev 0.167, tau vs first -0.178, Jaccard vs first 0.167
+  snapshot 25 [checkpoint->checkpoint] LIME: tau vs prev +0.457, Jaccard vs prev 0.273, tau vs first +0.265, Jaccard vs first 0.000
+  snapshot 26 [checkpoint->checkpoint] SHAP: tau vs prev +0.600, Jaccard vs prev 0.400, tau vs first -0.183, Jaccard vs first 0.167
+  snapshot 26 [checkpoint->checkpoint] LIME: tau vs prev +0.628, Jaccard vs prev 0.556, tau vs first +0.357, Jaccard vs first 0.077
+  snapshot 27 [checkpoint->checkpoint] SHAP: tau vs prev +0.464, Jaccard vs prev 0.273, tau vs first -0.183, Jaccard vs first 0.167
+  snapshot 27 [checkpoint->checkpoint] LIME: tau vs prev +0.563, Jaccard vs prev 0.400, tau vs first +0.367, Jaccard vs first 0.167
+  snapshot 28 [checkpoint->checkpoint] SHAP: tau vs prev +0.585, Jaccard vs prev 0.400, tau vs first -0.194, Jaccard vs first 0.167
+  snapshot 28 [checkpoint->checkpoint] LIME: tau vs prev +0.740, Jaccard vs prev 0.400, tau vs first +0.392, Jaccard vs first 0.077
+  snapshot 29 [checkpoint->checkpoint] SHAP: tau vs prev +0.639, Jaccard vs prev 0.556, tau vs first -0.183, Jaccard vs first 0.077
+  snapshot 29 [checkpoint->checkpoint] LIME: tau vs prev +0.514, Jaccard vs prev 0.273, tau vs first +0.308, Jaccard vs first 0.077
+  snapshot 30 [checkpoint->final] SHAP: tau vs prev +0.643, Jaccard vs prev 0.400, tau vs first -0.183, Jaccard vs first 0.000
+  snapshot 30 [checkpoint->final] LIME: tau vs prev +0.620, Jaccard vs prev 0.273, tau vs first +0.404, Jaccard vs first 0.000
+Time taken          : 293.9 seconds
+================================================================

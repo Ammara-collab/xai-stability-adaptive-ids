@@ -1,0 +1,25 @@
+{
+  "n_rows": 2951471,
+  "n_windows": 296,
+  "weighted_accuracy": 0.9999146188459924,
+  "windows_below_1": 24,
+  "windows_below_0.999": 9,
+  "windows_below_0.997": 2,
+  "min_window_accuracy": 0.9956,
+  "n_drifts": 24,
+  "drifts_by_detector": {
+    "error": 13,
+    "feature": 11
+  },
+  "n_snapshots": 47,
+  "unseen_phaseB_mean": 0.0013385714285714286,
+  "unseen_phaseB_max": 0.0937,
+  "unseen_phaseB_zero_windows": 69,
+  "unseen_phaseB_n": 70,
+  "main_phaseB_mean": 0.9998428571428573,
+  "main_phaseB_min": 0.9956,
+  "snapshot_acc_mean": 0.9993404255319146,
+  "snapshot_acc_min": 0.9956,
+  "snapshot_acc_std": 0.0011859062897335495,
+  "snapshot_acc_n_unique": 10
+}
